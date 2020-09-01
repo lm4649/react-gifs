@@ -13,7 +13,7 @@ class App extends Component {
       gifs: []
     };
 
-    this.search('disney');
+    // this.search('disney');
   }
 
   search = (query) => {
@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div>
         <div className='left-scene'>
-          <SearchBar />
+          <SearchBar search={this.search} />
           <div className='selected-gif'>
           <div className='gif'>
             <Gif id={ this.state.selectedGifId } />
